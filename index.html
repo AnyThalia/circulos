@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #001f3f; /* Fondo azul oscuro */
+        }
+
+        #container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #FF5733; /* Cambia el color aquí */
+            animation: move 5s linear infinite, rotate 5s linear infinite, changeColor 5s linear infinite;
+        }
+
+        @keyframes move {
+            0%, 100% {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            25% {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            50% {
+                top: 50%;
+                left: 100%;
+                transform: translateY(-50%);
+            }
+            75% {
+                top: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes rotate {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(90deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            75% {
+                transform: rotate(270deg);
+            }
+        }
+
+        @keyframes changeColor {
+            0%, 100% {
+                background-color: #FF5733; /* Cambia el color aquí */
+            }
+            25% {
+                background-color: #33FF57;
+            }
+            50% {
+                background-color: #5733FF;
+            }
+            75% {
+                background-color: #FF5733;
+            }
+        }
+
+        #welcome-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: white; /* Color del texto */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <!-- Agrega más círculos si lo deseas -->
+        <div class="circle" style="animation-delay: 0s;"></div>
+        <div class="circle" style="animation-delay: 1s;"></div>
+        <div class="circle" style="animation-delay: 2s;"></div>
+        <div class="circle" style="animation-delay: 3s;"></div>
+        <div class="circle" style="animation-delay: 4s;"></div>
+        <div class="circle" style="animation-delay: 5s;"></div>
+        <div class="circle" style="animation-delay: 6s;"></div>
+        <div class="circle" style="animation-delay: 7s;"></div>
+        
+        <div id="welcome-text">Bienvenidos!!!!</div>
+    </div>
+</body>
+</html>
